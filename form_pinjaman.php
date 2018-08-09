@@ -1,9 +1,6 @@
 <html>
     <body>
-
-        <form method="POST" 
-        action="tampil-pinjaman.php">
-
+        <form method="POST" action="">
         <p align="center"> Form Pinjaman </p>
 
         id <input type="text" name="id"/>
@@ -14,6 +11,20 @@
         <input type="submit" name="submit" value="kirim"/>
 
         </form>
-
     <body/>
 </html>
+
+<?php
+if(isset($_POST['submit'])) {
+    $id = $_POST['id'];
+    $date = $_POST['date'];
+    $jumlah = $_POST['jumlah'];
+    $saldo = $_POST['saldo'];
+
+    echo "<br>";
+    echo "id = " .$id ."<br>";
+    echo "date = " .$date ."<br>";
+    echo "jumlah = " .$jumlah ."<br>";
+    echo "saldo = " .$saldo ."<br>";
+} 
+?>
