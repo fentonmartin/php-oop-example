@@ -1,6 +1,6 @@
 <?php
 
-//buat class pinjaman
+//buat class tabungan
 // - id
 // - date
 // - jumlah
