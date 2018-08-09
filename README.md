@@ -1,30 +1,4 @@
-###FUNCTION
-Pahami:
-- binary search: https://www.geeksforgeeks.org/binary-search/
-- prime number
-- euclid algorithm (GCD)
-- prime checker
-- looping prime between number
-- quick sort
-- sorting (mana yg cepat)
-
-Return:
-- by value
-- by reference
-
-Bagaimana cara kerja algoritma?
-- Variabel, looping, if else, algoritma
-
-Bagaimana cara kerja algoritma?
-- Beda algoritma satu dan yang lain
-
-Reporting:
-- Langsung ke Mas Agus
-- Hasil dimasukan ke Git
-
----------------------------------------------------
-
-###CLASS - OOP
+CLASS - OOP
 Melihat sesuatu berdasarkan objek
 
 Buat class bank
@@ -43,11 +17,11 @@ Buat class account
 - function: print balance
 
 Class:
-bank: 
-account: 
-pinjaman: id, date, jumlah, saldo
-tabungan: id, date, jumlah, saldo
-cicilan: 
+- bank: (diatas)
+- account: (diatas)
+- pinjaman: id, date, jumlah, saldo
+- tabungan: id, date, jumlah, saldo
+- cicilan: (diatas)
 
 Tugas: (Peer Programming)
 - Setiap ada formnya
