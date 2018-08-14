@@ -1,13 +1,12 @@
 <?php
     include 'app.php';
-    
+
     // Disable error reporting
     error_reporting(E_ERROR | E_PARSE);
 
     // User check
     if (!isset($_SESSION['luser'])) {
-        echo "Please login ";
-        echo "<a href='http://localhost/php-oop-example/login.php'>here</a>";
+        echo "</br><p align='center'> <font size='6pt'>Please login <a href='http://localhost/php-oop-example/login.php'>here</a></font> </p>";
     }
     else {
         // Checking time when home page starts
@@ -17,25 +16,15 @@
         if ($now > $_SESSION['expire']) {
             // Remove session
             session_destroy();
-            echo "Your session has expired! <a href='http://localhost/php-oop-example/login.php'>Login here</a>";
+            echo "</br><p align='center'> <font size='6pt'>Your session has expired! <a href='http://localhost/php-oop-example/login.php'>Login here</a></font> </p>";
         }
         // Show homepage
         else {
-?>
-            <html>
-                Welcome,
-                <?php
-                    // Show homepage message
-                    echo " ".$_SESSION['luser'].". <a href='http://localhost/php-oop-example/logout.php'>Log out</a>";
-                ?>
-            </br>
-            <?php
-                // Show account table
-                include 'view/account.php';
-            ?>
-            </br>
-            </html>
-<?php
+            // Show homepage message
+            echo "</br><p align='center'> <font size='6pt'>Welcome, ".$_SESSION['luser'].". <a href='http://localhost/php-oop-example/logout.php'>Log out</a></font> </p>";
+
+            // Show account table
+            include 'view/account.php';
         }
     }
 ?>
