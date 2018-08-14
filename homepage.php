@@ -25,6 +25,10 @@
 
             // Show account table
             include 'view/account.php';
+            include 'view/bank.php';
+            include 'view/cicilan.php';
+            include 'view/pinjaman.php';
+            include 'view/tabungan.php';
         }
     }
 ?>
