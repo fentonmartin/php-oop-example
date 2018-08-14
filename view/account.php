@@ -10,10 +10,10 @@
       <table width="50%" align="center" border="1">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>Alamat</th>
-            <th>Saldo</th>
+            <th>ID Account</th>
+            <th>Nama Account</th>
+            <th>Alamat Account</th>
+            <th>Saldo Account</th>
             <th>Kode Bank</th>
           </tr>
         </thead>
