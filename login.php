@@ -4,14 +4,31 @@
 
 <html>
 	<body>
+        </br>
+        
+        <p align='center'> <font size='6pt'>Login</font> </p>
+        <p align='center'> <font color='grey' size='3pt'>(Input username '1' and password '1' to continue)</font> </p></td>
+    
 		<form method="post">
-	        Username
-	        <input type="text" name="text">
-		</br></br>
-	        Password
-	        <input type="password" name="pwd">
-		</br></br>
-			<input type="submit" value="Sign In" name="submit">
+            <table width="20%" align="center" cellpadding="3">
+                <tr>
+        	        <td>Username</td>
+        	        <td>
+                        <input type="text" name="text">
+                    </td>
+                </tr>
+                <tr>    
+        	        <td>Password</td>
+        	        <td>
+                        <input type="password" name="pwd">
+                    </td>
+                </tr>
+                <tr>
+        			<td colspan="2" align="center">
+                        <input type="submit" value="Sign In" name="submit">
+                    </td>
+                </tr>
+            </table>
 		</form>
 	</body>
 </html>
@@ -30,7 +47,7 @@
             $_SESSION['expire'] = $_SESSION['start'] + (999999999999999999999);
             header('Location: http://localhost/php-oop-example/homepage.php');
         } else {
-            echo "Username dan Password salah bro!";
+            echo "<p align='center'> <font color='red' size='3pt'>Username or password is incorrect! Try again!</font> </p>";
         }
     }
 ?>
