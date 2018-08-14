@@ -5,7 +5,7 @@
     <div align=center>
       <title>Account Page</title>
       <p>
-        <font size='4pt'>Account</font>
+        <font size='4pt'>List Account</font>
       </p>
       <table width="50%" align="center" border="1">
         <thead>
@@ -32,6 +32,5 @@
         <input align="right" type="submit" value="Add new record" />
       </form>
     </div>
-    </br>
   </body>
 </html>
