@@ -28,4 +28,4 @@ Tugas: (Peer Programming)
 - Masuk ke dalam session
 - Ada halaman menampilkan table data account
 
-![screen](screen_homepage.png)
+![Screenshot](screen/screen_homepage.png)
