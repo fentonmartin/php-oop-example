@@ -2,13 +2,18 @@
 <html>
   <body>
   </br>
+    <div align=center>
+      <title>Tabungan Page</title>
+      <p>
+        <font size='4pt'>List Tabungan</font>
+      </p>
     <table width="50%" align="center" border="1">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Date</th>
-          <th>Jumlah</th>
-          <th>Saldo</th>
+          <th>ID Tabungan</th>
+          <th>Tanggal Tabungan</th>
+          <th>Jumlah Tabungan</th>
+          <th>Saldo Tabungan</th>
         </tr>
       </thead>
       <?php for ($i=0; $i < count($_SESSION['id_tabungan']); $i++) {?>
