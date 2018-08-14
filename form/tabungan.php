@@ -1,3 +1,7 @@
+<?php
+    include '../app.php';
+    include '../obj/tabungan.php'; ?>
+
 <html>
     <body>
         <form method="POST" action="">
@@ -36,17 +40,27 @@
     <body/>
 </html>
 
+
 <?php
 if(isset($_POST['submit'])) {
-    $id = $_POST['id'];
-    $date = $_POST['date'];
-    $jumlah = $_POST['jumlah'];
-    $saldo = $_POST['saldo'];
 
+ // Inisiasi Object
+    $Tabungan = new Tabungan();
+
+    // Set Data Object
+    $Tabungan->setId($_POST['id']);
+    $Tabungan->setDate($_POST['date']);
+    $Tabungan->setJumlah($_POST['jumlah']);
+    $Tabungan->setSaldo($_POST['saldo']);
+
+    // Get Data Object and Set on Session
+    array_push($_SESSION['id_tabungan'], $Tabungan->getId());
+    array_push($_SESSION['date_tabungan'], $Tabungan->getDate());
+    array_push($_SESSION['jumlah_tabungan'], $Tabungan->getJumlah());
+    array_push($_SESSION['saldo_tabungan'], $Tabungan->getSaldo());
+
+    // Notifikasi
     echo "<br>";
-    echo "id = " .$id ."<br>";
-    echo "date = " .$date ."<br>";
-    echo "jumlah = " .$jumlah ."<br>";
-    echo "saldo = " .$saldo ."<br>";
-} 
+    echo "Success, Data " .$Tabungan->getId()." have been recorded!";
+}
 ?>
