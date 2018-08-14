@@ -1,3 +1,7 @@
+<?php
+    include '../app.php';
+    include '../obj/bank.php'; ?>
+
 <html>
     <body>
         <form method="POST" action="">
@@ -39,15 +43,24 @@
 
 <?php
 if(isset($_POST['submit'])) {
-    $id = $_POST['id'];
-    $nama = $_POST['nama'];
-    $alamat = $_POST['alamat'];
-    $telepon = $_POST['telepon'];
 
+ // Inisiasi Object
+    $Bank = new Bank();
+
+    // Set Data Object
+    $Bank->setId($_POST['id']);
+    $Bank->setName($_POST['nama']);
+    $Bank->setAddress($_POST['alamat']);
+    $Bank->setPhone($_POST['telepon']);
+
+    // Get Data Object and Set on Session
+    array_push($_SESSION['id_bank'], $Bank->getId());
+    array_push($_SESSION['name_bank'], $Bank->getName());
+    array_push($_SESSION['address_bank'], $Bank->getAddress());
+    array_push($_SESSION['phone_bank'], $Bank->getPhone());
+
+    // Notifikasi
     echo "<br>";
-    echo "id = " .$id ."<br>";
-    echo "nama = " .$nama ."<br>";
-    echo "alamat = " .$alamat ."<br>";
-    echo "telepon = " .$telepon ."<br>";
-} 
+    echo "Success, Data " .$Bank->getName()." have been recorded!";
+}
 ?>
