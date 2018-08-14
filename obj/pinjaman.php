@@ -29,7 +29,7 @@ class Pinjaman {
     }
 
     function setJumlah($par){
-        $this->date = $par;
+        $this->jumlah = $par;
     }
 
     function getJumlah(){
