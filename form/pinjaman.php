@@ -1,3 +1,7 @@
+<?php
+    include '../app.php';
+    include '../obj/pinjaman.php'; ?>
+
 <html>
     <body>
         <form method="POST" action="">
@@ -36,17 +40,27 @@
     <body/>
 </html>
 
+
 <?php
 if(isset($_POST['submit'])) {
-    $id = $_POST['id'];
-    $date = $_POST['date'];
-    $jumlah = $_POST['jumlah'];
-    $saldo = $_POST['saldo'];
 
+ // Inisiasi Object
+    $Pinjaman = new Pinjaman();
+
+    // Set Data Object
+    $Pinjaman->setId($_POST['id']);
+    $Pinjaman->setDate($_POST['date']);
+    $Pinjaman->setJumlah($_POST['jumlah']);
+    $Pinjaman->setSaldo($_POST['saldo']);
+
+    // Get Data Object and Set on Session
+    array_push($_SESSION['id_pinjaman'], $Pinjaman->getId());
+    array_push($_SESSION['date_pinjaman'], $Pinjaman->getDate());
+    array_push($_SESSION['jumlah_pinjaman'], $Pinjaman->getJumlah());
+    array_push($_SESSION['saldo_pinjaman'], $Pinjaman->getSaldo());
+
+    // Notifikasi
     echo "<br>";
-    echo "id = " .$id ."<br>";
-    echo "date = " .$date ."<br>";
-    echo "jumlah = " .$jumlah ."<br>";
-    echo "saldo = " .$saldo ."<br>";
-} 
+    echo "Success, Data " .$Pinjaman->getId()." have been recorded!";
+}
 ?>

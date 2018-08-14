@@ -1,3 +1,7 @@
+<?php
+    include '../app.php';
+    include '../obj/cicilan.php'; ?>
+
 <html>
     <body>
         <form method="POST" action="">
@@ -36,17 +40,27 @@
     <body/>
 </html>
 
+
 <?php
 if(isset($_POST['submit'])) {
-    $id = $_POST['id'];
-    $date = $_POST['date'];
-    $jumlah = $_POST['jumlah'];
-    $saldo = $_POST['saldo'];
 
+ // Inisiasi Object
+    $Cicilan = new Cicilan();
+
+    // Set Data Object
+    $Cicilan->setId($_POST['id']);
+    $Cicilan->setDate($_POST['date']);
+    $Cicilan->setJumlah($_POST['jumlah']);
+    $Cicilan->setSaldo($_POST['saldo']);
+
+    // Get Data Object and Set on Session
+    array_push($_SESSION['id_cicilan'], $Cicilan->getId());
+    array_push($_SESSION['date_cicilan'], $Cicilan->getDate());
+    array_push($_SESSION['jumlah_cicilan'], $Cicilan->getJumlah());
+    array_push($_SESSION['saldo_cicilan'], $Cicilan->getSaldo());
+
+    // Notifikasi
     echo "<br>";
-    echo "id = " .$id ."<br>";
-    echo "date = " .$date ."<br>";
-    echo "jumlah = " .$jumlah ."<br>";
-    echo "saldo = " .$saldo ."<br>";
-} 
+    echo "Success, Data " .$Cicilan->getId()." have been recorded!";
+}
 ?>

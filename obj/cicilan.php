@@ -42,7 +42,7 @@
         }
 
         function getSaldo(){
-            $this->saldo = $par;
+            return $this->saldo;
         }
 
     }
