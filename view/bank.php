@@ -25,6 +25,10 @@
           </tr>
         <?php } ?>
       </table>
+      </br>  
+      <form action="http://localhost/php-oop-example/form/bank.php">
+        <input align="right" type="submit" value="Add new record" />
+      </form>
     </div>
   </body>
 </html>
