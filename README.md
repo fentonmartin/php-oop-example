@@ -1,33 +1,19 @@
-CLASS - OOP
-Melihat sesuatu berdasarkan objek
+## CLASS - Object-oriented programming (OOP) [Peer Programming]
+### Melihat sesuatu berdasarkan objek pada PHP
 
-Buat class bank
-- id
-- nama
-- alamat
-- telpon
-- function: print nama bank
-
-Buat class account
-- id
-- nama
-- alamat
-- balance
-- id bank
-- function: print balance
-
-Class:
-- bank: (diatas)
-- account: (diatas)
+#### Class:
+- bank: id, nama, alamat, balance, id bank
+- account: id, nama, alamat, telpon
 - pinjaman: id, date, jumlah, saldo
 - tabungan: id, date, jumlah, saldo
-- cicilan: (diatas)
+- cicilan: id, date, jumlah, saldo
 
-Tugas: (Peer Programming)
+#### Tugas:
 - Setiap ada formnya
 - Masuk ke dalam session
 - Ada halaman menampilkan table data account
 
+#### Screen:
 ![Homepage Screen](https://github.com/fentonmartin/php-oop-example/blob/master/screen/screen_homepage.jpg)
 
 ![Form Screen](https://github.com/fentonmartin/php-oop-example/blob/master/screen/screen_form.jpg)
