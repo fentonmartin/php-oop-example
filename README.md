@@ -28,4 +28,4 @@ Tugas: (Peer Programming)
 - Masuk ke dalam session
 - Ada halaman menampilkan table data account
 
-![Homepage Screen](/screen/screen_homepage.png)
+![Homepage Screen](https://github.com/fentonmartin/php-oop-example/blob/master/screen/screen_homepage.jpg)
