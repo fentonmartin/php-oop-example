@@ -1,3 +1,7 @@
+<?php
+    include '../app.php';
+    include '../obj/account.php'; ?>
+
 <html>
     <body>
         <form method="POST" action="">
@@ -43,18 +47,26 @@
 
 <?php
 if(isset($_POST['submit'])) {
-    $id = $_POST['id'];
-    $nama = $_POST['nama'];
-    $alamat = $_POST['alamat'];
-    $balance = $_POST['balance'];
-    $idbank = $_POST['idbank'];
 
+    // Inisiasi Object
+    $Account = new Account();
 
+    // Set Data Object
+    $Account->setId($_POST['id']);
+    $Account->setName($_POST['nama']);
+    $Account->setAddress($_POST['alamat']);
+    $Account->setBalance($_POST['balance']);
+    $Account->setIdBank($_POST['idbank']);
+
+    // Get Data Object and Set on Session
+    array_push($_SESSION['id_account'], $Account->getId());
+    array_push($_SESSION['name_account'], $Account->getName());
+    array_push($_SESSION['address_account'], $Account->getAddress());
+    array_push($_SESSION['balance_account'], $Account->getBalance());
+    array_push($_SESSION['id_bank_account'], $Account->getIdBank());
+
+    // Notifikasi
     echo "<br>";
-    echo "id = " .$id ."<br>";
-    echo "nama = " .$nama ."<br>";
-    echo "alamat = " .$alamat ."<br>";
-    echo "balance = " .$balance ."<br>";
-    echo "id bank = " .$idbank ."<br>";  
-} 
+    echo "Success, Data " .$Account->getName()." have been recorded!";
+}
 ?>
