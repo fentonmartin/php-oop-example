@@ -2,8 +2,8 @@
 ### Melihat sesuatu berdasarkan objek pada PHP
 
 #### Class:
-- bank: id, nama, alamat, balance, id bank
-- account: id, nama, alamat, telpon
+- account: id, nama, alamat, balance, id bank
+- bank: id, nama, alamat, telpon
 - pinjaman: id, date, jumlah, saldo
 - tabungan: id, date, jumlah, saldo
 - cicilan: id, date, jumlah, saldo
